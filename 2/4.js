@@ -23,4 +23,15 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const number2 = +prompt('Введите целое число');
+if (Number.isInteger (number2))  { 
+    const hundreds = (number2%1000-number2%100)/100;
+    const decimals = (number2%100-number2%10)/10;
+    const ones = number2%10;
+   alert (`В числе ${number2} количество сотен:  ${hundreds} 
+   количество десятков:  ${decimals} количество единиц:  ${ones}`)
+}
+else {
+    alert("Неверное значение.");
+}
+

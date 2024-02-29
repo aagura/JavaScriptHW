@@ -14,4 +14,12 @@
 число 32.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+let number = +prompt('Введите целое число в интервале [1, 32)');
+if ((Number.isInteger (number)) && (1 <= number) && (number < 32)) { 
+   let decade = (number-number%10)/10 + 1;
+   if (number%10 === 0) {decade = decade -1}; 
+   alert (`Число ${number} попадает в ${decade} декаду месяца`)
+}
+else {
+    alert("Неверное значение.");
+}
