@@ -18,4 +18,55 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function sum(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    if (a === b) {
+        return 0;
+    } else {
+        return Math.max(a, b) - Math.min(a, b);
+    }
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        console.log("Деление на ноль!");
+        return NaN;
+    }
+    return a / b;
+}
+
+const number1 = parseFloat(prompt("Введите первое число:"));
+const number2 = parseFloat(prompt("Введите второе число:"));
+
+const operation = prompt("Выберите операцию:\n1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление");
+
+let result;
+
+switch (operation) {
+    case "1":
+        result = sum(number1, number2);
+        break;
+    case "2":
+        result = subtract(number1, number2);
+        break;
+    case "3":
+        result = multiply(number1, number2);
+        break;
+    case "4":
+        result = divide(number1, number2);
+        break;
+    default:
+        console.log("Неверный выбор операции.");
+}
+
+if (result !== undefined) {
+    console.log(`Результат операции: ${result}`);
+}
+

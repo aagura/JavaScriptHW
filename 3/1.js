@@ -7,4 +7,13 @@
 который получаем от функции, в консоль.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+
+function cube(number) {
+    return number ** 3;
+}
+
+
+const number = prompt('Введите число:');
+const result1 = cube(number);
+console.log(`Число ${number} в кубе равно: ${result1}`);
+

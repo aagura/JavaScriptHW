@@ -10,4 +10,18 @@
 три числа. Проверять их не нужно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+
+function findMaxNumber(numbers) {
+    const maxNumber = Math.max(...numbers);
+    console.log(`Максимальное значение среди чисел ${numbers.join(", ")} равно ${maxNumber}.`);
+}
+
+const numbers = [];
+
+for (let i = 0; i < 3; i++) {
+    const userInput = parseFloat(prompt(`Пожалуйста, введите число ${i + 1}:`));
+    numbers.push(userInput);
+}
+
+findMaxNumber(numbers);
+
