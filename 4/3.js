@@ -14,4 +14,20 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+
+const array = [];
+let sum = 0;
+let min = 10;
+const indexesOfThree = [];
+for (let i = 0; i < 5; i++) {
+    array[i] = Math.floor(Math.random() * 10);
+    sum = sum + array[i];
+    if (array[i] < min) min = array[i];
+    if (array[i] === 3) indexesOfThree.push(i);
+}
+
+console.log("Сгенерированный массив:", array);
+console.log("Сумма элементов массива:", sum);
+console.log("Минимальное значение в массиве:", min);
+console.log("Индексы элементов со значением 3:", indexesOfThree);
+

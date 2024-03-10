@@ -10,4 +10,8 @@
 10 – четное число
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+for (let index = 0; index < 11; index++) {
+    if (index === 0) console.log(`0 - это ноль`);
+    else if (index % 2 === 0) console.log(`${index} - четное число`);
+    else console.log(`${index} - нечетное число`);
+}
