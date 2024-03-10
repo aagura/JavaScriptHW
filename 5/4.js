@@ -9,7 +9,7 @@
 Если сложно работать с методами массива, то можно сделать и обычным циклом.
 */
 
-const products = [
+const products1 = [
   {
     id: 3,
     price: 127,
@@ -31,4 +31,5 @@ const products = [
   },
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+console.log(products1.filter(item => item.photos && item.photos.length > 0));
+console.log(products1.sort((a, b) => a.price - b.price));
